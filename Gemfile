@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 gem 'bootstrap-sass'
 gem 'coffee-rails'
-gem "font-awesome-rails"
+gem 'devise'
+gem 'font-awesome-rails'
 gem 'friendly_id'
 gem 'jbuilder'
 gem 'jquery-rails'
