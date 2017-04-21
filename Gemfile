@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'coffee-rails'
 gem 'devise'
 gem 'font-awesome-rails'
