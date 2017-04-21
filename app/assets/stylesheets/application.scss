@@ -1,5 +1,6 @@
-/*
- *= require font-awesome
- *= require_self
- *= require_tree .
- */
+@import "bootstrap";
+@import "util";
+@import "colors";
+@import "base";
+@import "navbar";
+@import "posts";
