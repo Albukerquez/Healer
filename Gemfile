@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'annotate'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'coffee-rails'
 gem 'devise'
