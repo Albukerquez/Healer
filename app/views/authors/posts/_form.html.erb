@@ -39,6 +39,10 @@
                 <%= f.text_area :description, class: 'form-control' %>
             </li>
             <li class="list-group-item">
+                <%= f.label 'Tags' %>
+                <%= f.text_area :tag_list, class: 'form-control' %>
+            </li>
+            <li class="list-group-item">
                 <%= f.submit "Save blog post", class: 'btn btn-success btn-block' %>
             </li>
           </ul>
