@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:page_title) %> | MaloryBlog</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -10,8 +10,8 @@
   <body>
     <%= render 'layouts/navbar' %>
     <% if notice || alert %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     <% end %>
     <div class="container <%= controller_name %> <%= action_name %>">
       <%= yield %>
