@@ -14,6 +14,7 @@ gem 'rails'
 gem 'sass-rails'
 gem 'turbolinks'
 gem 'uglifier'
+gem 'will_paginate'
 
 group :development, :test do
   gem 'byebug', platform: :mri
