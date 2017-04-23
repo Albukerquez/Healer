@@ -19,6 +19,7 @@ gem 'will_paginate'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'pry-rails'
 end
 
 group :development do
