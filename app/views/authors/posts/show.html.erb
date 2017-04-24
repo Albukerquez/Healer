@@ -11,7 +11,7 @@
   <div class="col-md-1 col-lg-2"></div>
   <div class="col-md-10 col-lg-8 text-xs-center">
     <h1><%= @post.title %></h1>
-    <p><%= @post.display_day_published %></p>
+    <small><i class="fa fa-clock-o"></i> <%= @post.display_day_published %></small>
     <%= @post.body.html_safe %>
   </div>
 </div>

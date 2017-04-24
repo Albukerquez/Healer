@@ -5,7 +5,18 @@
   <div class="col-md-1 col-lg-2"></div>
   <div class="col-md-10 col-lg-8 text-xs-center">
     <h1><%= @post.title %></h1>
-    <p><%= @post.display_day_published %></p>
+    <hr>
+    <div class="row">
+      <div class="col-sm-6 text-sm-left">
+        <div class="published_at"><i class="fa fa-clock-o"></i> <%= @post.display_day_published %></div>
+        <div class="updated_at"><%= @post.display_updated_at %></div>
+      </div>
+      <div class="col-sm-6 text-sm-right">
+        <a href="http://malory-blog.disqus.com/article2.html#disqus_thread"><i class="fa fa-comments"></i> comments</a>
+        <%= link_to 'comments', authors_post_path(@post) %>
+      </div>
+    </div>
+    <hr>
     <%= @post.body.html_safe %>
       <div id="disqus_thread"></div>
       <noscript>

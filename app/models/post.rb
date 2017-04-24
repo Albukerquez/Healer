@@ -47,6 +47,14 @@ class Post < ApplicationRecord
     end
   end
 
+  def display_updated_at
+    if updated_at.present?
+      "Last Updated #{updated_at.strftime('%-b %-d, %Y')}"
+    else
+      "Not updated yet."
+    end
+  end
+
   def publish
     update(published: true, published_at: Time.now)
   end

@@ -28,7 +28,14 @@
           font-size: 12px;
         }
       }
-      .published-date {
+      .published-at {
+        font-size: 0.8rem;
+        color: #787878;
+        font-weight: 300;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+      }
+      .updated-at {
         font-size: 0.8rem;
         color: #787878;
         font-weight: 300;
@@ -111,4 +118,8 @@
   .posts.index .card {
     height: 415px;
   }
+}
+
+.navbar-toggler {
+    position: absolute;
 }
