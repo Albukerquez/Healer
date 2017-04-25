@@ -1,57 +1,64 @@
 <div class="row">
   <!-- Basic info section -->
   <%= form_tag authors_info_path, method: :put do %>
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-block">
-          <div class="card-title">
-            Basic info
+    <%= fields_for :author do |f| %>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-block">
+            <div class="card-title">
+              Basic info
+            </div>
           </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <%= f.label :name %>
+              <%= f.text_field :name, value: current_author.name, class: 'form-control' %>
+            </li>
+            <li class="list-group-item">
+              <%= f.label :email %>
+              <%= f.email_field :email, value: current_author.email, class: 'form-control' %>
+            </li>
+            <li class="list-group-item">
+              <%= f.label :bio %>
+              <%= f.text_area :bio, value: current_author.bio, class: 'form-control' %>
+            </li>
+            <li class="list-group-item">
+              <%= f.submit "Update info", class: 'btn btn-primary' %>
+            </li>
+          </ul>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <%= label_tag :name %>
-            <%= text_field_tag :name, nil, class: 'form-control' %>
-          </li>
-          <li class="list-group-item">
-            <%= label_tag :email %>
-            <%= email_field_tag :email, nil, class: 'form-control' %>
-          </li>
-          <li class="list-group-item">
-            <%= label_tag :bio %>
-            <%= text_area_tag :bio, nil, class: 'form-control' %>
-          </li>
-          <li class="list-group-item">
-            <%= submit_tag "Update info", class: 'btn btn-primary' %>
-          </li>
-        </ul>
       </div>
-    </div>
+    <% end %>
   <% end %>
     <!-- Change password section -->
-  <%= form_tag authors_password_path do %>
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-block">
-          <div class="card-title">
-            Change password
+  <%= form_tag authors_change_password_path do %>
+    <%= fields_for :author do |f| %>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-block">
+            <div class="card-title">
+              Change password
+            </div>
           </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <%= f.label :current_password %>
+              <%= f.password_field :current_password, class: 'form-control' %>
+            </li>
+            <li class="list-group-item">
+              <%= f.label :new_password %>
+              <%= f.password_field :new_password, class: 'form-control' %>
+            </li>
+            <li class="list-group-item">
+              <%= f.label :new_password_confirmation %>
+              <%= f.password_field :new_password_confirmation, class: 'form-control' %>
+            </li>
+             <li class="list-group-item">
+              <%= f.submit "Change password", class: 'btn btn-warning' %>
+            </li>
+          </ul>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <%= label_tag :current_password %>
-            <%= password_field_tag :current_password, nil, class: 'form-control' %>
-          </li>
-          <li class="list-group-item">
-            <%= label_tag :new_password %>
-            <%= password_field_tag :new_password, nil, class: 'form-control' %>
-          </li>
-          <li class="list-group-item">
-            <%= label_tag :new_password_confirmation %>
-            <%= password_field_tag :new_password_confirmation, nil, class: 'form-control' %>
-          </li>
-        </ul>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
