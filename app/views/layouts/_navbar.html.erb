@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light navbar-toggleable-sm bg-faded justify-content-center">
   <div class="container">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon float-right"></span>
     </button>
     <a href="/" class="navbar-brand d-flex w-50 mr-auto">Malory<span class="light">blog</span></a>
     <div class="navbar-collapse collapse" id="collapsingNavbar3">
@@ -22,7 +22,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <%= link_to 'My posts', authors_posts_path, class: "dropdown-item" %>
-              <%= link_to 'Account', '#', class: "dropdown-item" %>
+              <%= link_to 'Account', authors_account_path, class: "dropdown-item" %>
               <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
