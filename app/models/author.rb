@@ -33,4 +33,11 @@ class Author < ApplicationRecord
            password_confirmation: attrs[:new_password_confirmation])
   end
 
+  def display_name
+    if name.present?
+      name
+    else
+      'Author'
+    end
+  end
 end

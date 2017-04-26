@@ -17,6 +17,12 @@
     </div>
     <hr>
     <%= @post.body.html_safe %>
+
+    <div class="author-bio text-center">
+      <%= gravatar_for current_author %>
+      <h4><%= @post.author.name %></h4>
+      <h6 class="bio"><%= @post.author.bio %></h6>
+    </div>
       <div id="disqus_thread"></div>
       <noscript>
         Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
