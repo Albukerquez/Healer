@@ -27,7 +27,7 @@ class Post < ApplicationRecord
 
   belongs_to :author
 
-  PER_PAGE = 6
+  PER_PAGE = 10
 
   scope :most_recent, (-> { order(published_at: :desc) })
   scope :published, (-> { where(published: true) })
