@@ -3,7 +3,9 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a href="/" class="navbar-brand d-flex w-50 mr-auto">Malory<span class="light">blog</span></a>
+    <%= link_to root_path do %>
+      <%= image_tag 'logoMAL', width: 100, height: 90, alt: 'logo', class: 'mr-auto' %>
+    <% end %>
     <div class="navbar-collapse collapse" id="collapsingNavbar3">
         <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
           <li class="nav-item active">

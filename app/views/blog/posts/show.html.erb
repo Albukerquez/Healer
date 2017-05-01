@@ -11,15 +11,12 @@
         <div class="published_at"><i class="fa fa-clock-o"></i> <%= @post.display_day_published %></div>
         <div class="updated_at"><%= @post.display_updated_at %></div>
       </div>
-      <div class="col-sm-6 text-sm-right">
-        <a href="<%= @post.slug %>#disqus_thread"></a>
-      </div>
     </div>
     <hr>
     <%= @post.body.html_safe %>
 
     <div class="author-bio text-center">
-      <%= gravatar_for current_author %>
+      <%= gravatar_for @post.author %>
       <h4><%= @post.author.name %></h4>
       <h6 class="bio"><%= @post.author.bio %></h6>
     </div>

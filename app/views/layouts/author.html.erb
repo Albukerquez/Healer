@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'application/favicon' %>
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
   </head>
   <body>
@@ -23,6 +24,5 @@
       <%= yield %>
     </div>
   <%= render 'layouts/footer' %>
-  <script id="dsq-count-scr" src="//malory-blog.disqus.com/count.js" async></script>
   </body>
 </html>

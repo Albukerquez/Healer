@@ -12,7 +12,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'puma'
 gem 'rails'
-gem 'sass-rails'  
+gem 'sass-rails'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'will_paginate'
@@ -24,6 +24,7 @@ end
 
 group :development do
   gem 'listen'
+  gem 'rails_real_favicon'
   gem 'spring'
   gem 'spring-watcher-listen'
   gem 'web-console'
