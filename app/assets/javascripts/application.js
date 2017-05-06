@@ -24,4 +24,4 @@ document.addEventListener("turbolinks:load", function() {
     plugins: "codesample emoticons image media link code",
     toolbar: "undo redo | styleselect | bold italic link | codesample image media code | emoticons"
   });
-})
+});
