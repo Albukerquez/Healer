@@ -1,8 +1,13 @@
 # My Blog
 
-* need to do:
-** 1. Layout and css
-** 2. make articles
-** 3. 
+`used technologies:`
 
-adsasdsadadsdas
+* bootstrap 4
+* tinymce
+* devise
+
+`to do:`
+
+* add articles
+* fix layout and css
+* write tests

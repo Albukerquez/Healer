@@ -15,8 +15,8 @@ module Blog
 
     private
 
-      def storage
-        Post.published
-      end
+    def storage
+      Post.published
+    end
   end
 end
