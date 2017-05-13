@@ -9,13 +9,13 @@
     <div class="navbar-collapse collapse" id="collapsingNavbar3">
         <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
           <li class="nav-item active">
-            <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
+            <%= link_to 'Блог', root_path, class: "nav-link #{yield(:blog_active)}" %>
           </li>
           <li class="nav-item">
-            <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+            <%= link_to 'Информация', about_path, class: "nav-link #{yield(:about_active)}" %>
           </li>
           <li class="nav-item">
-            <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+            <%= link_to 'Контакты', contact_path, class: "nav-link #{yield(:contact_active)}" %>
           </li>
           <% if author_signed_in? %>
           <li class="nav-item dropdown author-nav">

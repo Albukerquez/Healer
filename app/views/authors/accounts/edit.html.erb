@@ -5,26 +5,26 @@
       <div class="d-flex flex-nowrap mr-auto">
         <div class="card">
           <div class="card-block">
-            <h6 class="card-title text-center">Basic info</h6>
+            <h6 class="card-title text-center">Информация</h6>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <%= gravatar_for current_author %>
             </li>
             <li class="list-group-item">
-              <%= f.label :name %>
+              <%= f.label 'Никнейм' %>
               <%= f.text_field :name, value: current_author.name, class: 'form-control' %>
             </li>
             <li class="list-group-item">
-              <%= f.label :email %>
+              <%= f.label 'Почта' %>
               <%= f.text_field :email, value: current_author.email, class: 'form-control' %>
             </li>
             <li class="list-group-item">
-              <%= f.label :bio %>
+              <%= f.label 'Биография' %>
               <%= f.text_area :bio, value: current_author.bio, class: 'form-control' %>
             </li>
             <li class="list-group-item">
-              <%= f.submit "Update info", class: 'btn btn-primary' %>
+              <%= f.submit 'Обновить', class: 'btn btn-primary' %>
             </li>
           </ul>
         </div>
@@ -37,23 +37,23 @@
       <div class="d-flex flex-nowrap ml-auto">
         <div class="card">
           <div class="card-block">
-            <h6 class="card-title text-center">Change password</h6>
+            <h6 class="card-title text-center">Изменить пароль</h6>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-              <%= f.label :current_password %>
+              <%= f.label 'Текущий пароль' %>
               <%= f.password_field :current_password, class: 'form-control' %>
             </li>
             <li class="list-group-item">
-              <%= f.label :new_password %>
+              <%= f.label 'Новый пароль' %>
               <%= f.password_field :new_password, class: 'form-control' %>
             </li>
             <li class="list-group-item">
-              <%= f.label :new_password_confirmation %>
+              <%= f.label 'Подтверждение нового пароля' %>
               <%= f.password_field :new_password_confirmation, class: 'form-control' %>
             </li>
              <li class="list-group-item">
-              <%= f.submit "Change password", class: 'btn btn-warning' %>
+              <%= f.submit 'Изменить пароль', class: 'btn btn-warning' %>
             </li>
           </ul>
         </div>
