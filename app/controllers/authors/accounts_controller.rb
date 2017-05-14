@@ -1,8 +1,7 @@
 module Authors
   class AccountsController < AuthorController
 
-    def edit
-    end
+    def edit; end
 
     def update_info
       if current_author.update(author_info_params)

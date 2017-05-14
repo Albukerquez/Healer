@@ -10,8 +10,7 @@ module Authors
 
     # GET /posts/1
     # GET /posts/1.json
-    def show
-    end
+    def show; end
 
     # GET /posts/new
     def new
@@ -19,8 +18,7 @@ module Authors
     end
 
     # GET /posts/1/edit
-    def edit
-    end
+    def edit; end
 
     def publish
       @post.publish
