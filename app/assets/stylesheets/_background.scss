@@ -1,0 +1,47 @@
+.splash .tint .container h1 {
+    color: white;
+    // font-size: 4rem;
+    display: table-cell;
+    vertical-align: middle;
+}
+.container>h1 {
+    margin: 2rem 0 0 0;
+}
+.splash .tint .container {
+    text-align: center;
+    display: table;
+    height: 20rem;
+}
+.tint {
+  // background: rgba(20,66,138,0.9);
+  // opacity: 0.70;
+  text-shadow: 0px 2px 0px #0f3166;
+}
+.splash {
+    height: 20rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    background-image: image-url('chin.jpg');
+    overflow: hidden
+}
+.splash .tint {
+    width: 100%;
+    height: 25rem
+}
+.splash+.container {
+    margin-top: -5rem
+}
+
+/* all above working just great */
+.article-highlight {
+  background-color: #6c71c4;
+  padding: 0.2rem 0.5rem;
+  display: inline-block;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  color: #fff;
+}
+
+h1 {
+  text-transform: uppercase;
+}

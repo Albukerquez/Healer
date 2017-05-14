@@ -10,6 +10,14 @@
   </head>
   <body>
     <%= render 'layouts/navbar' %>
+    <div class="splash">
+      <div class="tint">
+        <div class="container">
+          <h1 class="article-title">
+          <span class="article-highlight">Статьи</span></h1>
+        </div>
+      </div>
+    </div>
     <div class="container <%= controller_name %> <%= action_name %>">
         <% if flash.any? %>
           <% flash.keys.each do |key| %>
@@ -23,6 +31,7 @@
         <% end %>
       <%= yield %>
     </div>
+
   <%= render 'layouts/footer' %>
   </body>
 </html>
