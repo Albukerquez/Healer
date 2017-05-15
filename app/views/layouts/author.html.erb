@@ -10,13 +10,32 @@
   </head>
   <body>
     <%= render 'layouts/navbar' %>
-    <div class="splash">
-      <div class="tint">
+<% if @post %>
+    <div class="article">
+      <header class="article-header header-vertical-position-mid">
         <div class="container">
-          <h1 class="article-title">
-          <span class="article-highlight">Статьи</span></h1>
+          <div class="col-md-1"></div>
+          <div class="article-header-elements col-md-11">
+            <!-- <div class="mobile-article-header-img hidden-sm-up">
+            </div> -->
+            <h2 class="article-title">
+                <span class="article-highlight">
+                  <%= @post.title %>
+                </span>
+                <small class="article-subtitle">
+                  <span class="article-highlight">
+                    <%= @post.description %>
+                  </span>
+                </small>
+                  <p class="article-meta">
+                    <span class="article-highlight"> <i class="fa fa-clock-o"></i> <%= @post.display_day_published %> •
+                        <%= @post.display_updated_at %></span>
+                  </p>
+          </div>
         </div>
-      </div>
+          <div class="bg-angled bg-angled-bottom"></div>
+        <% end %>
+      </header>
     </div>
     <div class="container <%= controller_name %> <%= action_name %>">
         <% if flash.any? %>

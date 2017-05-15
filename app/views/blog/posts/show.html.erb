@@ -1,18 +1,23 @@
 <% provide(:title, @post.title) %>
 <% provide(:blog_active, 'active') %>
 
-<div class="row">
-  <div class="col-md-1 col-lg-2"></div>
-  <div class="col-md-10 col-lg-8 text-xs-center">
-    <h1 class="text-center"><%= @post.title %></h1>
-    <hr>
+
+<div class="row article">
+  <!-- <div class="col-md-1 col-lg-2"></div> -->
+  <!-- <div class="col-md-10 col-lg-8 text-xs-center"> -->
+  <!-- <div class="col-md-1"></div> -->
+  <div class="col-md-1"></div>
+  <div class="article-content col-md-10">
+    <div class="container">
+    <!-- <h1 class="text-center"><%= @post.title %></h1> -->
+    <!-- <hr>
     <div class="row">
       <div class="col-sm-6 text-sm-left">
         <div class="published_at"><i class="fa fa-clock-o"></i> <%= @post.display_day_published %></div>
         <div class="updated_at"><%= @post.display_updated_at %></div>
       </div>
     </div>
-    <hr>
+    <hr> -->
     <%= @post.body.html_safe %>
 
     <div class="author-bio text-center">
@@ -24,10 +29,12 @@
       <noscript>
         Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
       </noscript>
+    </div>
+   </div>
   </div>
 </div>
 
-<script>
+<!-- <script>
 
   /**
   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -44,4 +51,5 @@
   s.setAttribute('data-timestamp', +new Date());
   (d.head || d.body).appendChild(s);
   })();
-</script>
+
+</script> -->

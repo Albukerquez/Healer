@@ -1,56 +1,61 @@
 /* background image on top */
 
-.splash .tint .container h1 {
-    color: white;
-    // font-size: 4rem;
-    display: table-cell;
-    vertical-align: middle;
-}
-.container>h1 {
-    margin: 2rem 0 0 0;
-}
-.splash .tint .container {
-    text-align: center;
-    display: table;
-    height: 20rem;
-}
-.tint {
-  // background: rgba(20,66,138,0.9);
-  // opacity: 0.70;
-  text-shadow: 0px 2px 0px #0f3166;
-}
-.splash {
-  height: 20rem;
-  padding-bottom: 5rem;
-  width: 100%;
-  background-image: image-url('chin.jpg');
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  overflow: hidden
-}
-.splash .tint {
-    width: 100%;
-    height: 25rem
-}
-.splash+.container {
-    margin-top: -5rem
-}
+// .splash .tint .container h1 {
+//     color: white;
+//     // font-size: 4rem;
+//     display: table-cell;
+//     vertical-align: middle;
+// }
+// .container>h1 {
+//     margin: 2rem 0 0 0;
+// }
+// .splash .tint .container {
+//     text-align: center;
+//     display: table;
+//     height: 20rem;
+// }
+// .tint {
+//   // background: rgba(20,66,138,0.9);
+//   // opacity: 0.70;
+//   text-shadow: 0px 2px 0px #0f3166;
+// }
+// .splash {
+//   height: 20rem;
+//   padding-bottom: 5rem;
+//   width: 100%;
+//   background-image: image-url('chin.jpg');
+//   // background-position: center;
+//   // background-repeat: no-repeat;
+//   // background-size: cover;
+//   top: 0;
+//   left: 0;
+//   z-index: -1;
+//   width: 100%;
+//   // height: 100%;
+//   background-position: 50% 50%;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   // overflow: hidden
+// }
+// .splash .tint {
+//     width: 100%;
+//     height: 25rem
+// }
+// .splash+.container {
+//     margin-top: -5rem
+// }
 
 /* all above working just great */
 
 
 /* article-highlighting */
 
-.article-highlight {
-  background-color: #6c71c4;
-  padding: 0.2rem 0.5rem;
-  display: inline-block;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  color: #fff;
-}
 
-h1 {
-  text-transform: uppercase;
-}
+
+// h1 {
+//   text-transform: uppercase;
+// }
+
+// .index {
+//   margin-top: 150px;
+// }
