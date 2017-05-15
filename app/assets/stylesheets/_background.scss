@@ -1,3 +1,5 @@
+/* background image on top */
+
 .splash .tint .container h1 {
     color: white;
     // font-size: 4rem;
@@ -18,11 +20,14 @@
   text-shadow: 0px 2px 0px #0f3166;
 }
 .splash {
-    height: 20rem;
-    padding-bottom: 5rem;
-    width: 100%;
-    background-image: image-url('chin.jpg');
-    overflow: hidden
+  height: 20rem;
+  padding-bottom: 5rem;
+  width: 100%;
+  background-image: image-url('chin.jpg');
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  overflow: hidden
 }
 .splash .tint {
     width: 100%;
@@ -33,6 +38,10 @@
 }
 
 /* all above working just great */
+
+
+/* article-highlighting */
+
 .article-highlight {
   background-color: #6c71c4;
   padding: 0.2rem 0.5rem;
