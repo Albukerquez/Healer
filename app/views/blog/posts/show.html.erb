@@ -34,7 +34,7 @@
   </div>
 </div>
 
-<!-- <script>
+<script>
 
   /**
   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -52,4 +52,16 @@
   (d.head || d.body).appendChild(s);
   })();
 
-</script> -->
+/* * * Disqus Reset Function * * */
+var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
+    DISQUS.reset({
+        reload: true,
+        config: function () {
+            this.page.identifier = '<%= @post.slug %>';
+            this.page.url = '<%= request.original_url %>';
+            this.page.title = Malory;
+            this.language = Russian;
+        }
+    });
+};
+</script>

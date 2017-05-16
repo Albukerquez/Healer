@@ -1,9 +1,9 @@
-<% provide(:title, 'Articles') %>
+<% provide(:title, 'Статьи') %>
 <% provide(:blog_active, 'active') %>
 
 <div class="row">
   <%= render @posts %>
 </div>
 <div class="apple_pagination">
-  <%= will_paginate @posts, container: false %>
+  <%= will_paginate @posts, :previous_label => t("Назад"), :next_label => t("Вперед"), container: false %>
 </div>
