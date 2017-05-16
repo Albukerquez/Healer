@@ -1,4 +1,5 @@
 .article-header {
+  overflow: hidden;
   position: relative;
   min-height: 30rem;
   height: 75vh;
@@ -132,19 +133,34 @@
 
 /* poloska */
 .bg-angled {
-    background-color: #fff;
-    position: absolute;
-    left: -50%;
-    width: 200%;
-    height: 10rem;
-    transform: rotate(-2deg);
-    -webkit-transform: rotate(-2deg);
-    z-index: 2;
+  background-color: #fff;
+  position: absolute;
+  left: -50%;
+  width: 200%;
+  height: 10rem;
+  transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  z-index: 2;
 }
 .bg-angled.bg-angled-bottom {
     bottom: -7rem;
 }
 
+
+@media (max-width: 544px) {
+    .bg-angled {
+        display:none
+    }
+}
+
+.bg-angled.bg-angled-opposite {
+    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg)
+}
+
+.bg-angled.bg-angled-top {
+    top: -7rem
+}
 /* end of polostka */
 
 /* article */

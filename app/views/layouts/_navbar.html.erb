@@ -24,9 +24,9 @@
               <%= current_author.name %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <%= link_to 'My posts', authors_posts_path, class: "dropdown-item" %>
-              <%= link_to 'Account', authors_account_path, class: "dropdown-item" %>
-              <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
+              <%= link_to 'Посты', authors_posts_path, class: "dropdown-item" %>
+              <%= link_to 'Аккаунт', authors_account_path, class: "dropdown-item" %>
+              <%= link_to 'Выйти', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
           <% end %>
