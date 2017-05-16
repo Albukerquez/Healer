@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.4.1p111'
+ruby '2.4.1'
 
 gem 'acts-as-taggable-on'
 gem 'bootstrap', '~> 4.0.0.alpha6'
