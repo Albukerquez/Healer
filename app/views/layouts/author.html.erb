@@ -11,26 +11,26 @@
   <body>
     <%= render 'layouts/navbar' %>
 <% if @post %>
-    <div class="article">
-      <header class="article-header header-vertical-position-mid">
-        <div class="container">
-          <div class="col-md-1"></div>
-          <div class="article-header-elements col-md-11">
-            <!-- <div class="mobile-article-header-img hidden-sm-up">
-            </div> -->
-            <h2 class="article-title">
+  <div class="article">
+    <header class="article-header header-vertical-position-mid">
+      <div class="container">
+        <div class="col-md-1 hidden-sm-down"></div>
+        <div class="article-header-elements col-md-11 col-sm-12 col-12">
+          <!-- <div class="mobile-article-header-img hidden-sm-up">
+          </div> -->
+          <h2 class="article-title">
+              <span class="article-highlight">
+                <%= @post.title %>
+              </span>
+              <small class="article-subtitle">
                 <span class="article-highlight">
-                  <%= @post.title %>
+                  <%= @post.description %>
                 </span>
-                <small class="article-subtitle">
-                  <span class="article-highlight">
-                    <%= @post.description %>
-                  </span>
-                </small>
-                  <p class="article-meta">
-                    <span class="article-highlight"> <i class="fa fa-clock-o"></i> <%= @post.display_day_published %> •
-                        <%= @post.display_updated_at %></span>
-                  </p>
+              </small>
+              <p class="article-meta">
+                <span class="article-highlight"> <i class="fa fa-clock-o"></i> <%= @post.display_day_published %> •
+                    <%= @post.display_updated_at %></span>
+              </p>
           </div>
         </div>
           <div class="bg-angled bg-angled-bottom"></div>
