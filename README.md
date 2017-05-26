@@ -8,6 +8,4 @@
 
 `to do:`
 
-* add articles
-* fix layout and css
 * write tests
