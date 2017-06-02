@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.4.1'
 
 gem 'acts-as-taggable-on'
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 gem 'coffee-rails'
 gem 'devise'
 gem 'font-awesome-rails'
@@ -14,17 +14,10 @@ gem 'pg'
 gem 'puma'
 gem 'rails'
 gem 'sass-rails'
+gem 'popper_js'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'will_paginate'
-
-group :development, :test do
-  gem 'byebug', platform: :mri
-  gem 'pry-rails'
-  gem 'capybara', '~> 2.13.0'
-  gem 'rspec-rails', '~> 3.5'
-  gem 'factory_girl_rails'
-end
 
 group :development do
   gem 'annotate'
@@ -38,4 +31,21 @@ group :development do
   gem 'spring-watcher-listen'
   gem 'traceroute'
   gem 'web-console'
+end
+
+group :development, :test do
+  gem 'byebug', platform: :mri
+  gem 'dotenv-rails'
+  gem 'pry-rails'
+  gem 'capybara'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'faker'
+  gem 'fuubar'
+  gem 'rails-controller-testing'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
 end

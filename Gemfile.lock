@@ -1,3 +1,20 @@
+GIT
+  remote: https://github.com/thoughtbot/shoulda-matchers.git
+  revision: ead87017a6c15adce66a87dce8ee2ece91d0d27c
+  branch: rails-5
+  specs:
+    shoulda-matchers (3.1.2)
+      activesupport (>= 4.0.0)
+
+GIT
+  remote: https://github.com/twbs/bootstrap-rubygem
+  revision: e92f95fb42ab938fd6f4d59e7b3b243e297ef58f
+  specs:
+    bootstrap (4.0.0.alpha6)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (>= 1.9.9, < 2.0)
+      sass (>= 3.4.19)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -47,7 +64,7 @@ GEM
       rake (>= 0.8.7)
     arel (7.1.4)
     ast (2.3.0)
-    autoprefixer-rails (6.7.7.2)
+    autoprefixer-rails (7.1.1)
       execjs
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -55,9 +72,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.11)
     bindex (0.5.0)
-    bootstrap (4.0.0.alpha6)
-      autoprefixer-rails (>= 6.0.3)
-      sass (>= 3.4.19)
     builder (3.2.3)
     bullet (5.5.1)
       activesupport (>= 3.0.0)
@@ -84,6 +98,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    database_cleaner (1.6.1)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     devise (4.2.1)
@@ -95,6 +110,10 @@ GEM
     diff-lcs (1.3)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -103,6 +122,8 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     ffi (1.9.18)
     flay (2.9.0)
       erubis (~> 2.7.0)
@@ -117,6 +138,9 @@ GEM
       railties (>= 3.2, < 5.1)
     friendly_id (5.2.1)
       activerecord (>= 4.0.0)
+    fuubar (2.2.0)
+      rspec-core (~> 3.0)
+      ruby-progressbar (~> 1.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     http-cookie (1.0.3)
@@ -160,6 +184,7 @@ GEM
       ast (~> 2.2)
     path_expander (1.0.2)
     pg (0.20.0)
+    popper_js (1.9.9)
     powerpack (0.1.1)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -186,6 +211,10 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 5.0.2)
       sprockets-rails (>= 2.0.0)
+    rails-controller-testing (1.0.2)
+      actionpack (~> 5.x, >= 5.0.1)
+      actionview (~> 5.x, >= 5.0.1)
+      activesupport (~> 5.x)
     rails-dom-testing (2.0.2)
       activesupport (>= 4.2.0, < 6.0)
       nokogiri (~> 1.6)
@@ -317,28 +346,35 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on
   annotate
-  bootstrap (~> 4.0.0.alpha6)
+  bootstrap!
   bullet
   byebug
-  capybara (~> 2.13.0)
+  capybara
   coffee-rails
+  database_cleaner
   devise
+  dotenv-rails
   factory_girl_rails
+  faker
   font-awesome-rails
   friendly_id
+  fuubar
   jbuilder
   jquery-rails
   listen
   meta_request
   pg
+  popper_js
   pry-rails
   puma
   rails
+  rails-controller-testing
   rails_real_favicon
-  rspec-rails (~> 3.5)
+  rspec-rails
   rubocop
   rubycritic
   sass-rails
+  shoulda-matchers!
   spring
   spring-watcher-listen
   traceroute
