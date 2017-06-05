@@ -1,20 +1,3 @@
-# == Schema Information
-#
-# Table name: posts
-#
-#  id               :integer          not null, primary key
-#  title            :string
-#  body             :text
-#  description      :text
-#  slug             :string
-#  created_at       :datetime         not null
-#  updated_at       :datetime         not null
-#  banner_image_url :string
-#  author_id        :integer
-#  published        :boolean          default("false")
-#  published_at     :datetime
-#
-
 class Post < ApplicationRecord
   acts_as_taggable # Alias for acts_as_taggable_on :tags
 
@@ -43,7 +26,7 @@ class Post < ApplicationRecord
     if published_at.present?
       "Опубликовано #{published_at.strftime('%-b %-d, %Y')}"
     else
-      'Not published yet.'
+      'Ещё не опубликовано'
     end
   end
 
