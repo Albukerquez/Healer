@@ -22,6 +22,7 @@ gem 'will_paginate'
 
 group :development do
   gem 'annotate'
+  gem 'brakeman', :require => false
   gem 'bullet'
   gem 'listen'
   gem 'rails_real_favicon'
