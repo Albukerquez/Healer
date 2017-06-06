@@ -8,4 +8,4 @@
 
 `to do:`
 
-* write tests [in process]
+* write tests [in process].
