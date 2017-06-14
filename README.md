@@ -2,9 +2,9 @@
 
 `used technologies:`
 
-* bootstrap 4
-* tinymce
-* devise
+* bootstrap 4.
+* tinymce.
+* devise.
 
 `to do:`
 
