@@ -1,7 +1,7 @@
 module Blog
   class PostsController < BlogController
     def index
-      @posts = storage.list_for(params[:page], params[:tag]).includes(:tag_taggings, :tags)
+      @posts = storage.list_for(params[:page])
     end
 
     def show

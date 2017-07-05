@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 ruby '2.4.1'
 
-gem 'acts-as-taggable-on'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'coffee-rails'
 gem 'devise'
@@ -22,7 +21,7 @@ gem 'will_paginate'
 
 group :development do
   gem 'annotate'
-  gem 'brakeman', :require => false
+  gem 'brakeman', require: false
   gem 'bullet'
   gem 'listen'
   gem 'rails_real_favicon'

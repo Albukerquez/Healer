@@ -1,11 +1,10 @@
 class Post < ApplicationRecord
-  acts_as_taggable # Alias for acts_as_taggable_on :tags
+  extend FriendlyId
 
-  list = lambda do |page, tag|
-    recent_paginated(page).with_tag(tag)
+  list = lambda do |page|
+    recent_paginated(page)
   end
 
-  extend FriendlyId
   friendly_id :title, use: :slugged
 
   belongs_to :author
@@ -15,7 +14,6 @@ class Post < ApplicationRecord
   scope :published, (-> { where(published: true) })
   scope :most_recent, (-> { order(published_at: :desc) })
   scope :recent_paginated, (->(page) { most_recent.paginate(page: page, per_page: PER_PAGE) })
-  scope :with_tag, (->(tag) { tagged_with(tag) if tag.present? })
   scope :list_for, list
 
   def should_generate_new_friendly_id?

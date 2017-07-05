@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20170605070742) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
-    t.text     "bio"
     t.boolean  "admin",                  default: false
     t.index ["email"], name: "index_authors_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_authors_on_reset_password_token", unique: true, using: :btree
@@ -60,31 +59,6 @@ ActiveRecord::Schema.define(version: 20170605070742) do
     t.datetime "published_at"
     t.index ["author_id"], name: "index_posts_on_author_id", using: :btree
     t.index ["slug"], name: "index_posts_on_slug", unique: true, using: :btree
-  end
-
-  create_table "taggings", force: :cascade do |t|
-    t.integer  "tag_id"
-    t.string   "taggable_type"
-    t.integer  "taggable_id"
-    t.string   "tagger_type"
-    t.integer  "tagger_id"
-    t.string   "context",       limit: 128
-    t.datetime "created_at"
-    t.index ["context"], name: "index_taggings_on_context", using: :btree
-    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
-    t.index ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
-    t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
-    t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy", using: :btree
-    t.index ["taggable_id"], name: "index_taggings_on_taggable_id", using: :btree
-    t.index ["taggable_type"], name: "index_taggings_on_taggable_type", using: :btree
-    t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type", using: :btree
-    t.index ["tagger_id"], name: "index_taggings_on_tagger_id", using: :btree
-  end
-
-  create_table "tags", force: :cascade do |t|
-    t.string  "name"
-    t.integer "taggings_count", default: 0
-    t.index ["name"], name: "index_tags_on_name", unique: true, using: :btree
   end
 
 end

@@ -3,25 +3,22 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <%= link_to root_path do %>
-      <%= image_tag 'logoMAL', width: 100, height: 85, alt: 'logo', class: 'mr-auto' %>
-    <% end %>
+    <strong><%= link_to 'Целитель', root_path, class: 'mr-auto nav-link' %></strong>
     <div class="navbar-collapse collapse" id="collapsingNavbar3">
         <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
           <li class="nav-item active">
-            <%= link_to 'Блог', root_path, class: "nav-link #{yield(:blog_active)}" %>
+            <%= link_to 'Блог', posts_path, class: "nav-link #{yield(:blog_active)}" %>
           </li>
           <li class="nav-item">
-            <%= link_to 'Информация', about_path, class: "nav-link #{yield(:about_active)}" %>
+            <%= link_to 'Чем могу помочь', about_path, class: "nav-link #{yield(:about_active)}" %>
           </li>
           <li class="nav-item">
-            <%= link_to 'Контакты', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+            <%= link_to 'Обо мне', contact_path, class: "nav-link #{yield(:contact_active)}" %>
           </li>
           <% if author_signed_in? %>
           <li class="nav-item dropdown author-nav">
             <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= gravatar_for current_author %>
-              <%= current_author.name %>
+              Меню
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <%= link_to 'Посты', authors_posts_path, class: "dropdown-item" %>

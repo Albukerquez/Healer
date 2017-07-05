@@ -7,14 +7,14 @@ default: &default
 
 development:
   <<: *default
-  database: MaloryBlog_development
+  database: Healer_development
 
 test:
   <<: *default
-  database: MaloryBlog_test
+  database: Healer_test
 
 production:
   <<: *default
-  database: MaloryBlog_production
-  username: MaloryBlog
-  password: <%= ENV['MALORYBLOG_DATABASE_PASSWORD'] %>
+  database: Healer_production
+  username: Healer
+  password: <%= ENV['HEALER_DATABASE_PASSWORD'] %>

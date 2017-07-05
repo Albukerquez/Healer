@@ -9,19 +9,8 @@
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-              <%= gravatar_for current_author %>
-            </li>
-            <li class="list-group-item">
-              <%= f.label 'Никнейм' %>
-              <%= f.text_field :name, value: current_author.name, class: 'form-control' %>
-            </li>
-            <li class="list-group-item">
               <%= f.label 'Почта' %>
               <%= f.text_field :email, value: current_author.email, class: 'form-control' %>
-            </li>
-            <li class="list-group-item">
-              <%= f.label 'Биография' %>
-              <%= f.text_area :bio, value: current_author.bio, class: 'form-control' %>
             </li>
             <li class="list-group-item">
               <%= f.submit 'Обновить', class: 'btn btn-primary' %>
