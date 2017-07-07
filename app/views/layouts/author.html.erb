@@ -9,39 +9,6 @@
   </head>
   <body>
     <%= render 'layouts/navbar' %>
-<% if @post %>
-  <div class="article">
-    <header class="article-header header-vertical-position-mid">
-    <div class="container">
-      <div class="col-md-1 hidden-sm-down"></div>
-      <div class="article-header-elements col-md-11 col-sm-12 col-12">
-        <!-- <div class="mobile-article-header-img hidden-sm-up">
-        </div> -->
-        <h2 class="article-title">
-        <span class="article-highlight">
-          <%= @post.title %>
-        </span>
-        <small class="article-subtitle">
-          <span class="article-highlight">
-            <%= @post.description %>
-          </span>
-        </small>
-        </h2>
-        <p class="article-meta">
-          <span class="article-highlight"> <i class="fa fa-clock-o"></i> <%= @post.display_day_published %> •
-              <%= @post.display_updated_at %></span>
-        </p>
-      </div>
-    </div>
-    <div class="bg-angled bg-angled-bottom"></div>
-    </header>
-  </div>
-<% else %>
-  <div class="welcome">
-    <header class="background-header header-vertical-position-mid">
-    </header>
-  </div>
-<% end %>
     <div class="container <%= controller_name %> <%= action_name %>">
         <% if flash.any? %>
           <% flash.keys.each do |key| %>
@@ -49,13 +16,12 @@
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-              <%= flash[key] %><strong>
+             <strong><%= flash[key] %></strong>
             </div>
           <% end %>
         <% end %>
-      <%= yield %>
     </div>
-
+    <%= yield %>
   <%= render 'layouts/footer' %>
   </body>
 </html>

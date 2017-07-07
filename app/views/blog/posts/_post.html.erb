@@ -1,4 +1,4 @@
-<div class='col-sm-6 col-lg-4'>
+<div class='col-sm-12 col-lg-4'>
   <div class="card hvr-grow">
     <%= link_to post do %>
       <div class="card-topper" style='background-image: url(<%= post.banner_image_url %>);'></div>
@@ -7,8 +7,34 @@
       <h4 class="card-title"><%= link_to post.title, post %></h4>
       <small class="published_at"><i class="fa fa-clock-o"></i> <%= post.display_day_published %></small>
       <%= link_to post do %>
-        <p class="card-text"><%= truncate(post.description, length: 130) %></p>
+        <p class="card-text"><%= truncate(post.description, length: 230) %></p>
       <% end %>
     </div>
   </div>
 </div>
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+
+
+
+      <!-- /END THE FEATURETTES -->

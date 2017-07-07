@@ -1,11 +1,7 @@
 class Post < ApplicationRecord
-  extend FriendlyId
-
   list = lambda do |page|
     recent_paginated(page)
   end
-
-  friendly_id :title, use: :slugged
 
   belongs_to :author
 

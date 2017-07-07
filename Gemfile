@@ -6,7 +6,6 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'coffee-rails'
 gem 'devise'
 gem 'font-awesome-rails'
-gem 'friendly_id'
 gem 'jbuilder'
 gem 'jquery-rails'
 gem 'pg'
@@ -24,7 +23,6 @@ group :development do
   gem 'brakeman', require: false
   gem 'bullet'
   gem 'listen'
-  gem 'rails_real_favicon'
   gem 'rubocop', require: false
   gem 'rubycritic', require: false
   gem 'meta_request'

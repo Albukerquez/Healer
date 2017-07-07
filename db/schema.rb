@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 20170605070742) do
   enable_extension "plpgsql"
 
   create_table "authors", force: :cascade do |t|
-    t.string   "name"
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
@@ -34,23 +33,10 @@ ActiveRecord::Schema.define(version: 20170605070742) do
     t.index ["reset_password_token"], name: "index_authors_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "friendly_id_slugs", force: :cascade do |t|
-    t.string   "slug",                      null: false
-    t.integer  "sluggable_id",              null: false
-    t.string   "sluggable_type", limit: 50
-    t.string   "scope"
-    t.datetime "created_at"
-    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
-    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
-    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
-    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
     t.text     "description"
-    t.string   "slug"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
     t.string   "banner_image_url"
@@ -58,7 +44,6 @@ ActiveRecord::Schema.define(version: 20170605070742) do
     t.boolean  "published",        default: false
     t.datetime "published_at"
     t.index ["author_id"], name: "index_posts_on_author_id", using: :btree
-    t.index ["slug"], name: "index_posts_on_slug", unique: true, using: :btree
   end
 
 end

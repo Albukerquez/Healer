@@ -47,10 +47,10 @@ class Authors::PostsController < Authors::BaseController
 
   private
     def set_post
-      @post = current_author.posts.friendly.find(params[:id])
+      @post = current_author.posts.find(params[:id])
     end
 
     def post_params
-      params.require(:post).permit(:title, :body, :description, :banner_image_url, :tag_list)
+      params.require(:post).permit(:title, :body, :description, :banner_image_url)
     end
 end

@@ -5,7 +5,7 @@ module Blog
     end
 
     def show
-      @post = storage.friendly.find(params[:id])
+      @post = storage.find(params[:id])
     end
 
     private

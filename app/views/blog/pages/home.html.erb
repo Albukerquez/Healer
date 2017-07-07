@@ -1,3 +1,57 @@
-<h1>+7(911)980-45-57
-79119804557@yandex.ru</h1>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <%= image_tag("123.jpg", class: "first-slide", alt: "First slide") %>
+          <div class="container">
+            <div class="carousel-caption d-none d-md-block text-left">
+              <h1>Решение проблем с помощью биоэнергетики.</h1>
+              <p>На этом сайте, ты найдешь ответы, которые способны изменить твою жизнь в лучшую сторону.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag("meditation.jpg", class: "second-slide", alt: "Second slide") %>
+          <div class="container">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Делюсь мыслями в своём блоге.</h1>
+              <p>Познавайте себя. Становитесь мудрее. Методики преображения внутреннего мира и многое другое в моём блоге.</p>
+              <p><%= link_to 'Узнать больше', posts_path, class: "btn btn-lg btn-primary" %></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag("4.jpg", class: "third-slide", alt: "Third slide") %>
+          <div class="container">
+            <div class="carousel-caption d-none d-md-block text-right">
+              <h1>Чем могу помочь.</h1>
+              <p>Узнайте чем я вам могу помочь. Я помогу найти выход из любой сложившейся ситуации.</p>
+              <p><%= link_to 'Узнать', about_path, class: "btn btn-lg btn-primary" %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+
+
+
+      <!-- FOOTER -->
+
+    </div><!-- /.container -->
+
+
 
