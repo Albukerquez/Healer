@@ -1,52 +1,54 @@
-<div class="row justify-content-center">
-  <!-- Basic info section -->
-  <%= form_tag authors_info_path, method: :put do %>
-    <%= fields_for :author do |f| %>
-      <div class="d-flex flex-nowrap mr-auto">
-        <div class="card">
-          <div class="card-block">
-            <h6 class="card-title text-center">Информация</h6>
+<div class="container <%= controller_name %> <%= action_name %>">
+  <div class="row justify-content-center">
+    <!-- Basic info section -->
+    <%= form_tag authors_info_path, method: :put do %>
+      <%= fields_for :author do |f| %>
+        <div class="d-flex flex-nowrap mr-auto">
+          <div class="card">
+            <div class="card-block">
+              <h6 class="card-title text-center">Информация</h6>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <%= f.label 'Почта' %>
+                <%= f.text_field :email, value: current_author.email, class: 'form-control' %>
+              </li>
+              <li class="list-group-item">
+                <%= f.submit 'Обновить', class: 'btn btn-primary' %>
+              </li>
+            </ul>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <%= f.label 'Почта' %>
-              <%= f.text_field :email, value: current_author.email, class: 'form-control' %>
-            </li>
-            <li class="list-group-item">
-              <%= f.submit 'Обновить', class: 'btn btn-primary' %>
-            </li>
-          </ul>
         </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
-    <!-- Change password section -->
-  <%= form_tag authors_change_password_path, method: :put do %>
-    <%= fields_for :author do |f| %>
-      <div class="d-flex flex-nowrap ml-auto">
-        <div class="card">
-          <div class="card-block">
-            <h6 class="card-title text-center">Изменить пароль</h6>
+      <!-- Change password section -->
+    <%= form_tag authors_change_password_path, method: :put do %>
+      <%= fields_for :author do |f| %>
+        <div class="d-flex flex-nowrap ml-auto">
+          <div class="card">
+            <div class="card-block">
+              <h6 class="card-title text-center">Изменить пароль</h6>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <%= f.label 'Текущий пароль' %>
+                <%= f.password_field :current_password, class: 'form-control' %>
+              </li>
+              <li class="list-group-item">
+                <%= f.label 'Новый пароль' %>
+                <%= f.password_field :new_password, class: 'form-control' %>
+              </li>
+              <li class="list-group-item">
+                <%= f.label 'Подтверждение нового пароля' %>
+                <%= f.password_field :new_password_confirmation, class: 'form-control' %>
+              </li>
+               <li class="list-group-item">
+                <%= f.submit 'Изменить пароль', class: 'btn btn-warning' %>
+              </li>
+            </ul>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <%= f.label 'Текущий пароль' %>
-              <%= f.password_field :current_password, class: 'form-control' %>
-            </li>
-            <li class="list-group-item">
-              <%= f.label 'Новый пароль' %>
-              <%= f.password_field :new_password, class: 'form-control' %>
-            </li>
-            <li class="list-group-item">
-              <%= f.label 'Подтверждение нового пароля' %>
-              <%= f.password_field :new_password_confirmation, class: 'form-control' %>
-            </li>
-             <li class="list-group-item">
-              <%= f.submit 'Изменить пароль', class: 'btn btn-warning' %>
-            </li>
-          </ul>
         </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>

@@ -1,4 +1,6 @@
 <% provide(:page_title, 'New Post') %>
 <% provide(:author, 'active') %>
 
-<%= render 'form', post: @post, url: authors_posts_url %>
+<div class="container <%= controller_name %> <%= action_name %>">
+  <%= render 'form', post: @post, url: authors_posts_url %>
+</div>

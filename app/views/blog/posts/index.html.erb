@@ -1,9 +1,10 @@
 <% provide(:title, 'Блог') %>
 <% provide(:blog_active, 'active') %>
-
+<div class="container <%= controller_name %> <%= action_name %>">
 <div class="row">
   <%= render @posts %>
 </div>
-<div class="apple_pagination">
+<div class="flickr_pagination">
   <%= will_paginate @posts, :previous_label => t("Назад"), :next_label => t("Вперед"), container: false %>
+</div>
 </div>

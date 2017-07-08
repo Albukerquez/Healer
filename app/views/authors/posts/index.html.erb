@@ -1,14 +1,16 @@
 <% provide(:page_title, 'All Posts') %>
 <% provide(:author, 'active') %>
 
-<div class="row">
-  <div class="py-4">
-    <%= link_to 'Новый пост', new_authors_post_path, class: 'btn btn-primary btn-lg'%>
+<div class="container <%= controller_name %> <%= action_name %>">
+  <div class="row">
+    <div class="py-4">
+      <%= link_to 'Новый пост', new_authors_post_path, class: 'btn btn-primary btn-lg'%>
+    </div>
+    <table class="table table-striped">
+      <tr>
+        <th colspan="5">Заголовок</th>
+      </tr>
+      <%= render @posts %>
+    </table>
   </div>
-  <table class="table table-striped">
-    <tr>
-      <th colspan="5">Заголовок</th>
-    </tr>
-    <%= render @posts %>
-  </table>
 </div>
