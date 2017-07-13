@@ -12,12 +12,13 @@
       background-position: center;
     }
     .card-block {
-      padding: 10px;
+      padding: 18px;
       .card-title {
         font-size: 1.3rem;
         margin-bottom: 0;
+        color: black;
         a {
-          color: black;
+          // color: black;
           text-decoration: none;
         }
       }
@@ -43,7 +44,7 @@
         margin-bottom: 0.3rem;
       }
       .card-text {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         color: black;
       }
 
@@ -132,4 +133,25 @@
 
 .navbar-toggler .navbar-toggler-right {
   position: relative;
+}
+
+div.title-footer {
+  padding: 0 18px 16px;
+  line-height: 1.2;
+}
+
+span.bottom-link a {
+  display: inline-block;
+  max-width: 100%;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  color: #00965e;
+  font-size: 0.9rem;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+  text-decoration: none;
+}
+.bottom-link a:hover {
+  text-decoration: none;
+  color: #00633e;
 }

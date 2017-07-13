@@ -14,9 +14,12 @@
         outline: none;
     }
     .nav-link {
-      color: $primary-color-light !important;
+        padding: 15px 0;
+        margin-right: 20px;
+       color: #545454 !important;
       &.active {
-        color: $primary-color-text !important;
+        color: #545454 !important;
+        // color: $primary-color-text !important;
       }
     }
     .nav-item.author-nav {
@@ -42,7 +45,7 @@
 .collapse-bg .card .list-group-item {
     padding: 0;
     border-radius: 0 !important;
-    border-color: black;
+    // border-color: black;
     a {
         background-color: #1a1a1a;
         color: #bdc3c7;
@@ -56,4 +59,39 @@
     }
 }
 // some changes
-
+// .menu-item1 .menu-item2 {
+//     margin-top: 0;
+//     margin-bottom: 0;
+//     padding-bottom: 15px;
+//     padding-top: 15px;
+//     font-size: 16px;
+//     font-weight: 100;
+//     line-height: 20px;
+//     background: 0 0;
+//     text-decoration: none;
+//     font-family: "Bryant MOO Medium";
+// }
+.menu-item1 a:hover {
+    color: inherit;
+    background-color: transparent;
+    box-shadow: inset 0 -2px 0 #00965E;
+    transition: box-shadow 300ms, opacity 300ms;
+    // padding: 15px 0;
+    // margin-right: 20px;
+}
+.menu-item2 a:hover {
+    color: inherit;
+    background-color: transparent;
+    box-shadow: inset 0 -2px 0 #ee2737;
+    transition: box-shadow 300ms, opacity 300ms;
+    // padding: 15px 0;
+    // margin: 0 20px;
+}
+.menu-item3 a:hover {
+    color: inherit;
+    background-color: transparent;
+    box-shadow: inset 0 -2px 0 #48a9c5;
+    transition: box-shadow 300ms, opacity 300ms;
+    // padding: 15px 0;
+    // margin: 0 20px;
+}

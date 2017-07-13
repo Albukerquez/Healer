@@ -2,24 +2,22 @@
   background: white;
 }
 .card a:hover {
-  opacity: 0.85;
+  // opacity: 0.85;
 }
 .card h4 {
   font-size: 2rem;
   margin-top: 0;
 }
 
-/* hoover with effect GROW on cards */
-// .hvr-grow {
-//     display: inline-block;
-//     vertical-align: middle;
-//     transform: translateZ(0);
-//     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-//     backface-visibility: hidden;
-//     -moz-osx-font-smoothing: grayscale;
-//     transition-duration: 0.3s;
-//     transition-property: transform;
+// {
+//     box-shadow: 0 3px 10px 0 rgba(84,84,84,0.3);
+//     color: inherit;
 // }
+/* hoover with effect GROW on cards */
+.hvr-grow:hover {
+    box-shadow: 0 3px 10px 0 rgba(84,84,84,0.3);
+    color: inherit;
+}
 //
 // .hvr-grow:hover,
 // .hvr-grow:focus,
