@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :authors
+
   namespace :authors do
     get '/account' => 'accounts#edit', as: :account
     put '/info' => 'accounts#update_info', as: :info
