@@ -17,6 +17,7 @@ gem 'tether-rails'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'will_paginate'
+gem 'enumerize'
 
 group :development do
   gem 'annotate'

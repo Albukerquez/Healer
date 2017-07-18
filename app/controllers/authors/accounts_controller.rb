@@ -1,4 +1,5 @@
 class Authors::AccountsController < Authors::BaseController
+  before_action :authenticate_author!
 
   def edit; end
 

@@ -1,4 +1,5 @@
 class Authors::PostsController < Authors::BaseController
+  before_action :authenticate_author!
   before_action :set_post, only: %i(show edit update destroy publish unpublish)
 
   def index
